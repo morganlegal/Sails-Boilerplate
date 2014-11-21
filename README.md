@@ -1,11 +1,4 @@
-# sails-boilerplate
-
-a [Sails](http://sailsjs.org) application
-
-# sails-boilerplate
-
-Sails-Boilerplate
-=================
+# Sails-Boilerplate
 
 a [Sails](http://sailsjs.org) Sails boilerplate with sass, jade, authentification, etc.
 
