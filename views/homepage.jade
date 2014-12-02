@@ -69,26 +69,20 @@ block body
               // Try adding a custom route in your <code>config/routes.js</code> file and pointing it at <code>UserController.find</code>.
               p  
       .links.columns.small-3
-        // <h3>Links</h3>
-        ul.link-list.panel
+        .panel
+          h3 Links
           h4 Docs
-          a(target='_blank', href='http://sailsjs.org/#!documentation/anatomy')
-            li App Structure
-          a(target='_blank', href='http://sailsjs.org/#!documentation/reference')
-            li Reference
-          a(target='_blank', href='http://links.sailsjs.org/docs/faq')
-            li FAQ
-          a(target='_blank', href='http://sailsjs.org')
-            li Supported Databases
+          ul
+            li: a(target='_blank', href='http://sailsjs.org/#!documentation/anatomy') App Structure
+            li: a(target='_blank', href='http://sailsjs.org/#!documentation/reference') Reference
+            li: a(target='_blank', href='http://links.sailsjs.org/docs/faq') FAQ
+            li: a(target='_blank', href='http://sailsjs.org') Supported Databases
           h4 Tutorials
-          a(target='_blank', href='http://links.sailsjs.org/community/sails101')
-            li Sails 101
+          ul
+            li: a(target='_blank', href='http://links.sailsjs.org/community/sails101') Sails 101
           h4 Community
-          a(target='_blank', href='http://stackoverflow.com/search?q=sails.js')
-            li StackOverFlow
-          a(target='_blank', href='https://github.com/balderdashy/sails')
-            li GitHub
-          a(target='_blank', href='https://groups.google.com/forum/#!forum/sailsjs')
-            li Google Group
-          a(target='_blank', href='http://webchat.freenode.net/')
-            li IRC (#sailsjs on freenode)
+          ul
+            li: a(target='_blank', href='http://stackoverflow.com/search?q=sails.js') StackOverFlow
+            li: a(target='_blank', href='https://github.com/balderdashy/sails') GitHub
+            li: a(target='_blank', href='https://groups.google.com/forum/#!forum/sailsjs') Google Group
+            li: a(target='_blank', href='http://webchat.freenode.net/') IRC (#sailsjs on freenode)
