@@ -1,0 +1,36 @@
+extends ../layout
+
+block body
+  .row
+    .large-6.medium-8.large-offset-3.medium-offset-2.columns
+      .panel.login
+        h3.welcome Please sign up!
+        if !!data
+          .alert-box.alert
+            - console.log(typeof data, data.error);
+            - var message = typeof data === 'string' ? data : data.error.toJSON().toString();
+            =message
+        form(method="POST", action="/signup")
+          .row.collapse
+            .small-2.columns
+              span.prefix: i.fi-torso
+            .small-10.columns
+              input(type="text", name="name", placeholder="Name", value=(data?data.name:''))
+          .row.collapse
+            .small-2.columns
+               span.prefix: i.fi-mail
+            .small-10.columns
+              input(type="text", name="email", placeholder="Email", value=(data?data.email:''))
+          .row.collapse
+            .small-2.columns
+              span.prefix: i.fi-lock
+            .small-10.columns
+              input(type="password", name="password", placeholder="Password")
+          .row.collapse
+            .small-2.columns
+              span.prefix: i.fi-lock
+            .small-10.columns
+              input(type="password", name="confirmation", placeholder="Password confirmation")
+          .row.collapse
+            p.columns.small-12.text-center
+              input.button.tiny(type="submit", value="Sign up!")

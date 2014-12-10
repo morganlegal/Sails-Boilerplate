@@ -5,3 +5,13 @@
 @import "normalize";
 @import "foundation";
 @import "override";
+
+.login {
+
+  margin-top: 2em;
+  background: #fff;
+
+  .welcome { text-align: center; margin: 1em 0;}
+  i { font-size: 1.5em; }
+
+}

@@ -1,0 +1,7 @@
+extends ../layout
+
+block body
+  .row
+    .large-6.medium-8.large-offset-3.medium-offset-2.columns
+      .panel.login
+        h3.welcome= 'Welcome ' + session.user.name + '!'

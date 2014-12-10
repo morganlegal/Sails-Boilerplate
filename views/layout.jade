@@ -6,9 +6,23 @@ html
     // Viewport mobile tag for sensible mobile support
     meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
 
+    link(type='text/css', href='/styles/styles.css', rel='stylesheet')
     block styles
 
   body
+
+    .default-page.container
+      .top-bar(data-topbar, role="navigation")
+        ul.title-area
+          .name
+            h1: a(href="#") A brand new app.
+        section.top-bar-section
+          ul.right
+            li.has-form
+              a.button(href="/login")
+                i.fi-torso &nbsp;
+                | Log in
+
     block body
 
     // The linker searches for this tag and adds js.  If there's no linker, we point to sails.io.js
