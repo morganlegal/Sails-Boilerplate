@@ -11,7 +11,6 @@ module.exports = function(req, res, next) {
 
   // If `req.user` exists, that means the passport middleware was able to
   // inflate/hydrate/deserialize a valid user from the session.
-  sails.log('isAuthenticated', req.user);
   if (req.user) return next();
   return res.unauthorized();
 };

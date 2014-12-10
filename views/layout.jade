@@ -19,9 +19,14 @@ html
         section.top-bar-section
           ul.right
             li.has-form
-              a.button(href="/login")
-                i.fi-torso &nbsp;
-                | Log in
+              if session.passport.user
+                a.button.alert(href="/logout")
+                  i.fi-unlock &nbsp;
+                  | Log out
+              else
+                a.button.success(href="/login")
+                  i.fi-torso &nbsp;
+                  | Log in
 
     block body
 

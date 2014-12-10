@@ -11,7 +11,6 @@ var bcrypt = require('bcrypt');
  */
 
 module.exports = function login(opts) {
-  console.log('login', opts);
     // Get access to `req` and `res`
     var req = this.req;
     var res = this.res;
@@ -46,7 +45,6 @@ module.exports = function login(opts) {
             if (!user) return verify_cb(null, false, { message: 'Unknown username/password combo.' });
 
             bcrypt.compare(password, user.password, function(err, res) {
-              console.log('bcrypt compare', user);
                 if(res) return verify_cb(null, user);
                 else return verify_cb(null, false, { message: 'Unknown username/password combo.' });
             });

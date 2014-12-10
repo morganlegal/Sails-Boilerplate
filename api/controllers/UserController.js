@@ -34,10 +34,10 @@ module.exports = {
    * `UserController.signup()`
    */
   signup: function (req, res) {
-    var newUser = {
-      name: req.param('name'),
-      email: req.param('email'),
-      password: req.param('password')
+    var newUser = req.params.all();
+    if( newUser.password !== newUser.confirmation){
+      sails.log.error('Confirmation does not match password', newUser.password, newUser.confirmation);
+      return res.badRequest(new Error('Confirmation does not match password'));
     }
     sails.log('UserController.signup', newUser);
 

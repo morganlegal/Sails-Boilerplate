@@ -39,7 +39,7 @@ module.exports = {
   },
 
   beforeCreate: function (values, next) {
-    if( values.password !== values.confirmation) return next(new Error('Confirmation does not match password'));
+
     bcrypt.genSalt(10, function(err, salt) {
       bcrypt.hash(values.password, salt, function(err, hash) {
         if (err) {

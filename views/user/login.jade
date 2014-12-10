@@ -6,12 +6,12 @@ block body
       .panel.login
         h3.welcome Welcome back!
         form(method="POST", action="/login")
-          .alert-box.alert
-            i.fi-skull
-            | &nbsp;
-            - console.log(typeof data);
-            - var message = typeof data === 'string' ? data : data.error;
-            =message
+          if(!!data)
+            .alert-box.alert
+              i.fi-skull
+              | &nbsp;
+              - var message = typeof data === 'string' ? data : data.error;
+              =message
           .row.collapse
             .small-2.columns
                span.prefix: i.fi-mail
